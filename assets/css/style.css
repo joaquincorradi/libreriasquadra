@@ -1,0 +1,110 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+html {
+  font-family: sans-serif;
+}
+
+/*Resetear todos los valores de margin en el body a 0*/
+body {
+  margin: 0rem;
+}
+
+/*Desactivar decoraciones y colores en los links*/
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.anuncio {
+  padding: 0.4rem;
+  background-color: #f3f3f3;
+  text-align: center;
+  color: #5c5c5c;
+  font-size: 0.875rem;
+  font-family: "Oswald", sans-serif;
+}
+
+a.anuncio {
+  text-decoration: underline;
+}
+
+header {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#titulo {
+  margin: 0rem;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header li {
+  display: inline-block;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+header nav a:hover {
+  color: #b0daff;
+}
+
+.bienvenida {
+  text-align: center;
+}
+
+.section-bienvenida {
+  /* background-image: url("../img/fondo_bienvenida.webp"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-position: center; */
+  background-color: lightyellow;
+  padding: 5rem;
+}
+
+h2.bienvenida {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+p.bienvenida {
+  font-size: 1.5rem;
+}
+
+p.bienvenida {
+  margin-bottom: 3rem;
+}
+
+.section-boton {
+  font-size: 1rem;
+  margin-top: 2rem;
+  padding: 0.75rem;
+  background: grey;
+  border: 0.125rem solid grey;
+  border-radius: 0.5rem;
+}
+
+a:hover.section-boton {
+  color: #b0daff;
+}
+
+.titulo-servicios {
+  text-align: center;
+}
+
+.servicios {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 0.1rem;
+  margin: 2rem;
+}
+
+.heart {
+  color: #f92672;
+}

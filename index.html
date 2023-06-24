@@ -2,58 +2,66 @@
 <html lang="es">
   <head>
     <link href="assets/css/style.css" rel="stylesheet" />
-    <link href="assets/typography/typography.css" rel="stylesheet" />
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Inicio - Libreria Squadra</title>
   </head>
+
   <body>
     <!-- Barra de anuncio -->
-    <section>
-      <a href="pedido.html">ENVÍOS GRATUITOS EN CÓRDOBA</a>
+    <section class="anuncio">
+      <a class="anuncio" href="pedido.html">ENVÍOS GRATUITOS EN CÓRDOBA</a>
     </section>
 
     <!-- Título principal -->
     <header>
       <a href="/"><h1 id="titulo">Squadra</h1></a>
+
+      <!-- Barra de navegación -->
+      <nav>
+        <ul>
+          <a href="sobre.html"><li>Sobre nosotros</li></a>
+          <a href="pedido.html"><li>Hacer pedido</li></a>
+          <a href="galeria.html"><li>Galería</li></a>
+          <a href="contacto.html"><li>Contactanos</li></a>
+        </ul>
+      </nav>
     </header>
 
-    <!-- Barra de navegación -->
-    <nav>
-      <ul>
-        <a href="sobre.html"><li>Sobre nosotros</li></a>
-        <a href="pedido.html"><li>Hacer pedido</li></a>
-        <a href="galeria.html"><li>Galería</li></a>
-        <a href="contacto.html"><li>Contactanos</li></a>
-      </ul>
-    </nav>
-
     <!-- Sección de bienvenida -->
-    <section>
-      <h2>Equipate para tu aprendizaje con estilo</h2>
-      <p>
+    <section class="bienvenida section-bienvenida">
+      <h2 class="bienvenida">Equipate para tu aprendizaje con estilo</h2>
+      <p class="bienvenida">
         Descubre la mejor selección de útiles escolares para trabajar con estilo
         y eficiencia
       </p>
-      <a href="pedido.html">Comprar ahora</a>
+      <a class="bienvenida section-boton" href="pedido.html">Comprar ahora</a>
     </section>
 
     <!-- Seccion para mostrar algunos servicios que se prestan -->
-    <section>
-      <h2>Nuestros servicios</h2>
-
-      <article>
-        <img src="" alt="" />
+    <h2 class="titulo-servicios">Nuestros servicios</h2>
+    <section class="servicios">
+      <article class="servicios mayor">
+        <img src="assets/img/por_mayor.webp" height="250" alt="estanteria" />
         <p>Descuentos por compras al mayor</p>
         <a href="pedido.html">Más información</a>
       </article>
 
-      <article>
-        <img src="" alt="" />
+      <article class="servicios importacion">
+        <img src="assets/img/importacion.webp" height="250" alt="portaminas" />
         <p>Importación de útiles a pedido</p>
         <a href="pedido.html">Más información</a>
       </article>
 
-      <article>
-        <img src="" alt="" />
+      <article class="servicos eco">
+        <img src="assets/img/ecofriendly.webp" height="250" alt="ecolapices" />
         <p>Opciones eco-frindly</p>
         <a href="pedido.html">Más información</a>
       </article>
@@ -86,27 +94,43 @@
       <section>
         <article>
           <a href="https://facebook.com/squadralibreria/" target="_blank">
-            <img src="" alt="facebook logo" />
+            <img
+              src="assets/img/facebook.webp"
+              height="25"
+              alt="facebook logo"
+            />
           </a>
         </article>
 
         <article>
           <a href="https://instagram.com/squadrasrl/" target="_blank">
-            <img src="" alt="instagram logo" />
+            <img
+              src="assets/img/instagram.webp"
+              height="25"
+              alt="instagram logo"
+            />
           </a>
         </article>
 
         <article>
           <a href="https://wa.link/ago3ud" target="_blank">
-            <img src="" alt="whatsapp logo" />
+            <img
+              src="assets/img/whatsapp.webp"
+              height="25"
+              alt="whatsapp logo"
+            />
           </a>
         </article>
 
         <article>
           <a href="mailto:squadrasrl@squadrasrl.com.ar" target="_blank">
-            <img src="" alt="mail logo" />
+            <img src="assets/img/gmail.webp" height="25" alt="mail logo" />
           </a>
         </article>
+      </section>
+
+      <section>
+        <a href="#">Volver a arriba</a>
       </section>
 
       <section>
@@ -130,6 +154,11 @@
             >código abierto</a
           >
         </p>
+      </section>
+
+      <section>
+        <img src="assets/img/google-pay.webp" height="25" alt="gpay logo" />
+        <img src="assets/img/apple-pay.webp" height="25" alt="apple pay logo" />
       </section>
     </footer>
   </body>
