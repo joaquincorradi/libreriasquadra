@@ -13,18 +13,31 @@
       rel="stylesheet"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Inicio - Libreria Squadra</title>
   </head>
 
   <body>
     <!-- Barra de anuncio -->
     <section class="anuncio">
-      <a class="anuncio" href="pedido.html">ENVÍOS GRATUITOS EN CÓRDOBA</a>
+      <a class="anuncio" href="pedido.html"
+        >ENVÍOS GRATUITOS EN CÓRDOBA EN COMPRAS SUPERIORES A $5000 - 3 CUOTAS
+        SIN INTERÉS</a
+      >
     </section>
 
     <!-- Título principal -->
     <header>
-      <a href="/"><h1 id="titulo">Squadra</h1></a>
+      <!-- <a href="/"><h1 id="titulo">Squadra</h1></a> -->
+      <a href="/" id="titulo-logo">
+        <img src="assets/img/squadra.webp" height="200" alt="squadra logo" />
+      </a>
 
       <!-- Barra de navegación -->
       <nav>
@@ -48,35 +61,52 @@
     </section>
 
     <!-- Seccion para mostrar algunos servicios que se prestan -->
-    <h2 class="titulo-servicios">Nuestros servicios</h2>
     <section class="servicios">
-      <article class="servicios mayor">
-        <img src="assets/img/por_mayor.webp" height="250" alt="estanteria" />
-        <p>Descuentos por compras al mayor</p>
-        <a href="pedido.html">Más información</a>
-      </article>
+      <h2 class="servicios">Nuestros servicios</h2>
+      <section class="contenedor-servicios">
+        <article class="imagen-servicio">
+          <img src="assets/img/por_mayor.webp" height="250" alt="estanteria" />
+          <article class="texto-servicio">
+            <p>Descuentos por compras al mayor</p>
+            <a class="section-boton" href="pedido.html">Más información</a>
+          </article>
+        </article>
 
-      <article class="servicios importacion">
-        <img src="assets/img/importacion.webp" height="250" alt="portaminas" />
-        <p>Importación de útiles a pedido</p>
-        <a href="pedido.html">Más información</a>
-      </article>
+        <article class="imagen-servicio">
+          <img
+            src="assets/img/importacion.webp"
+            height="250"
+            alt="portaminas"
+          />
+          <article class="texto-servicio">
+            <p>Importación de útiles a pedido</p>
+            <a class="section-boton" href="pedido.html">Más información</a>
+          </article>
+        </article>
 
-      <article class="servicos eco">
-        <img src="assets/img/ecofriendly.webp" height="250" alt="ecolapices" />
-        <p>Opciones eco-frindly</p>
-        <a href="pedido.html">Más información</a>
-      </article>
+        <article class="imagen-servicio">
+          <img
+            src="assets/img/ecofriendly.webp"
+            height="250"
+            alt="ecolapices"
+          />
+          <article class="texto-servicio">
+            <p>Opciones eco-frindly</p>
+            <a class="section-boton" href="pedido.html">Más información</a>
+          </article>
+        </article>
+      </section>
     </section>
 
     <!-- Testimoniales -->
-    <section>
-      <h3>
+    <section class="testimonial testimonial-contenedor">
+      <h3 class="testimonial">
         "Desde que descubrí Squadra, mi experiencia de estudio ha mejorado
         significativamente. Sus útiles escolares me ayudan a mantenerme
         organizada y motivada. No puedo imaginar mi rutina académica sin ellos.
-        ¡Gracias!" - Laura P.
+        ¡Gracias!".
       </h3>
+      <p class="testimonial">- Laura</p>
     </section>
 
     <!-- Mapa -->
