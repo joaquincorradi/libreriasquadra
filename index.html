@@ -27,7 +27,7 @@
     <!-- Barra de anuncio -->
     <section class="anuncio">
       <a class="anuncio" href="pedido.html"
-        >ENVÍOS GRATUITOS EN CÓRDOBA EN COMPRAS SUPERIORES A $5000 - 3 CUOTAS
+        >ENVÍOS GRATUITOS EN BELL VILLE EN COMPRAS SUPERIORES A $5000 - 3 CUOTAS
         SIN INTERÉS</a
       >
     </section>
@@ -35,20 +35,21 @@
     <!-- Título principal -->
     <header>
       <!-- <a href="/"><h1 id="titulo">Squadra</h1></a> -->
-      <a href="/" id="titulo-logo">
+      <a href="index.html" id="titulo-logo">
         <img src="assets/img/squadra.webp" height="200" alt="squadra logo" />
       </a>
-
-      <!-- Barra de navegación -->
-      <nav>
-        <ul>
-          <a href="sobre.html"><li>Sobre nosotros</li></a>
-          <a href="pedido.html"><li>Hacer pedido</li></a>
-          <a href="galeria.html"><li>Galería</li></a>
-          <a href="contacto.html"><li>Contactanos</li></a>
-        </ul>
-      </nav>
     </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+      <ul>
+        <a href="index.html"><li>Inicio</li></a>
+        <a href="sobre.html"><li>Sobre nosotros</li></a>
+        <a href="pedido.html"><li>Hacer pedido</li></a>
+        <a href="galeria.html"><li>Galería</li></a>
+        <a href="contacto.html"><li>Contactanos</li></a>
+      </ul>
+    </nav>
 
     <!-- Sección de bienvenida -->
     <section class="bienvenida section-bienvenida">
@@ -63,38 +64,48 @@
     <!-- Seccion para mostrar algunos servicios que se prestan -->
     <section class="servicios">
       <h2 class="servicios">Nuestros servicios</h2>
+
       <section class="contenedor-servicios">
-        <article class="imagen-servicio">
-          <img src="assets/img/por_mayor.webp" height="250" alt="estanteria" />
-          <article class="texto-servicio">
-            <p>Descuentos por compras al mayor</p>
-            <a class="section-boton" href="pedido.html">Más información</a>
-          </article>
-        </article>
+        <ul>
+          <li>
+            <img
+              class="imagen-servicio"
+              src="assets/img/por_mayor.webp"
+              height="300"
+              alt="estanteria"
+            />
+            <p class="texto-servicio">Descuentos por compras al mayor</p>
+            <a class="section-boton texto-servicio" href="pedido.html"
+              >Más información</a
+            >
+          </li>
 
-        <article class="imagen-servicio">
-          <img
-            src="assets/img/importacion.webp"
-            height="250"
-            alt="portaminas"
-          />
-          <article class="texto-servicio">
-            <p>Importación de útiles a pedido</p>
-            <a class="section-boton" href="pedido.html">Más información</a>
-          </article>
-        </article>
+          <li>
+            <img
+              class="imagen-servicio"
+              src="assets/img/importacion.webp"
+              height="300"
+              alt="portaminas"
+            />
+            <p class="texto-servicio">Importación de útiles a pedido</p>
+            <a class="section-boton texto-servicio" href="pedido.html"
+              >Más información</a
+            >
+          </li>
 
-        <article class="imagen-servicio">
-          <img
-            src="assets/img/ecofriendly.webp"
-            height="250"
-            alt="ecolapices"
-          />
-          <article class="texto-servicio">
-            <p>Opciones eco-frindly</p>
-            <a class="section-boton" href="pedido.html">Más información</a>
-          </article>
-        </article>
+          <li>
+            <img
+              class="imagen-servicio"
+              src="assets/img/ecofriendly.webp"
+              height="300"
+              alt="ecolapices"
+            />
+            <p class="texto-servicio">Opciones eco-frindly</p>
+            <a class="section-boton texto-servicio" href="pedido.html"
+              >Más información</a
+            >
+          </li>
+        </ul>
       </section>
     </section>
 
@@ -110,12 +121,12 @@
     </section>
 
     <!-- Mapa -->
-    <section>
+    <section class="contenedor-mapa">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3360.0254102666395!2d-62.691982488095114!3d-32.63214677361504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cbfb1e10cfcea3%3A0x23806912668faa6f!2sLibreria%20Squadra!5e0!3m2!1ses-419!2sar!4v1687632340271!5m2!1ses-419!2sar"
-        width="600"
+        width="100%"
         height="450"
-        style="border: 0"
+        style="border: 0; outline: none"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
@@ -123,49 +134,51 @@
     </section>
 
     <footer>
-      <section>
-        <article>
-          <a href="https://facebook.com/squadralibreria/" target="_blank">
-            <img
-              src="assets/img/facebook.webp"
-              height="25"
-              alt="facebook logo"
-            />
-          </a>
-        </article>
-
-        <article>
-          <a href="https://instagram.com/squadrasrl/" target="_blank">
-            <img
-              src="assets/img/instagram.webp"
-              height="25"
-              alt="instagram logo"
-            />
-          </a>
-        </article>
-
-        <article>
-          <a href="https://wa.link/ago3ud" target="_blank">
-            <img
-              src="assets/img/whatsapp.webp"
-              height="25"
-              alt="whatsapp logo"
-            />
-          </a>
-        </article>
-
-        <article>
-          <a href="mailto:squadrasrl@squadrasrl.com.ar" target="_blank">
-            <img src="assets/img/gmail.webp" height="25" alt="mail logo" />
-          </a>
-        </article>
-      </section>
-
-      <section>
+      <section class="contenedor-volver">
         <a href="#">Volver a arriba</a>
       </section>
 
-      <section>
+      <section class="contenedor-redes">
+        <ul>
+          <li>
+            <a href="https://facebook.com/squadralibreria/" target="_blank">
+              <img
+                src="assets/img/facebook.webp"
+                height="25"
+                alt="facebook logo"
+              />
+            </a>
+          </li>
+
+          <li>
+            <a href="https://instagram.com/squadrasrl/" target="_blank">
+              <img
+                src="assets/img/instagram.webp"
+                height="25"
+                alt="instagram logo"
+              />
+            </a>
+          </li>
+
+          <li>
+            <a href="https://wa.link/ago3ud" target="_blank">
+              <img
+                src="assets/img/whatsapp.webp"
+                height="25"
+                alt="whatsapp logo"
+              />
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:squadrasrl@squadrasrl.com.ar" target="_blank">
+              <img src="assets/img/gmail.webp" height="25" alt="mail logo" />
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="contenedor-texto-footer margin-primer">
         <p>
           Hecho con <i class="nf nf-fa-heart heart"></i> en
           <i class="nf nf-dev-linux"></i> por
@@ -177,7 +190,7 @@
         </p>
       </section>
 
-      <section>
+      <section class="contenedor-texto-footer margin-segundo">
         <p>
           Esta web es de
           <a
@@ -188,9 +201,19 @@
         </p>
       </section>
 
-      <section>
-        <img src="assets/img/google-pay.webp" height="25" alt="gpay logo" />
-        <img src="assets/img/apple-pay.webp" height="25" alt="apple pay logo" />
+      <section class="contenedor-pagos">
+        <ul>
+          <li>
+            <img src="assets/img/google-pay.webp" height="30" alt="gpay logo" />
+          </li>
+          <li>
+            <img
+              src="assets/img/apple-pay.webp"
+              height="30"
+              alt="apple pay logo"
+            />
+          </li>
+        </ul>
       </section>
     </footer>
   </body>
