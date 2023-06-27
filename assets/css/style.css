@@ -70,7 +70,7 @@ nav a {
 }
 
 .section-bienvenida {
-  background-image: url(../img/books-g872d5f38a_640.jpg);
+  background-image: url(../img/fondo.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -104,8 +104,7 @@ a:hover.section-boton {
 }
 
 .servicios {
-  /* background-color: #69c8ea; */
-  background-color: #ea8a09;
+  background-color: #14477a;
   padding-bottom: 2rem;
 }
 
@@ -116,6 +115,7 @@ h2.servicios {
   padding-bottom: 1rem;
   margin-top: 0rem;
   margin-bottom: 1rem;
+  color: #ffffff;
 }
 
 .contenedor-servicios {
@@ -130,14 +130,14 @@ h2.servicios {
   display: inline-block;
   padding-top: 1.5rem;
   padding-bottom: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 .imagen-servicio {
   border-radius: 1rem;
-  height: 25rem;
-  width: 25rem;
+  height: 20rem;
+  width: 20rem;
 }
 
 p.texto-servicio {
