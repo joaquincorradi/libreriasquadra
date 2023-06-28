@@ -1,0 +1,47 @@
+.contenedor-form {
+  text-align: center;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.contenedor-form ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contenedor-form li {
+  width: 50%;
+  padding: 1.25px;
+  box-sizing: border-box;
+}
+
+.contenedor-form h2 {
+  font-size: 1.5rem;
+  margin-top: 0rem;
+  text-align: left;
+}
+
+.contenedor-form p {
+  margin-bottom: 0rem;
+  text-align: left;
+}
+
+form {
+  margin-top: 1.25rem;
+  padding-left: 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  box-sizing: border-box;
+  margin-bottom: 0.6rem;
+}
