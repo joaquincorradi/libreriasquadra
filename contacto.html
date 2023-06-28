@@ -33,6 +33,7 @@
 
     <title>Contacto - Libreria Squadra</title>
   </head>
+
   <body>
     <!-- Barra de anuncio -->
     <section class="anuncio">
@@ -60,45 +61,49 @@
       </ul>
     </nav>
 
-    <section class="contenedor-form">
-      <ul>
-        <li class="texto">
-          <h2>Contactate con Squadra</h2>
-          <p>
-            ¡Tu opinión es muy importante para nosotros en Squadra! Queremos
-            asegurarnos de brindarte la mejor experiencia. ¿Tenés alguna
-            pregunta, comentario o sugerencia? Estamos acá para ayudarte. Por
-            favor, completá el siguiente formulario y nos pondremos en contacto
-            con vos lo antes posible. ¡Gracias por elegir Squadra!
-          </p>
-        </li>
+    <section class="contenedor-form-contacto">
+      <section class="contenedor-texto-form section-individual">
+        <h2 class="titulo-contacto">Contactate con Squadra</h2>
+        <p class="texto-contacto">
+          ¡Tu opinión es muy importante para nosotros en Squadra! Queremos
+          asegurarnos de brindarte la mejor experiencia. ¿Tenés alguna pregunta,
+          comentario o sugerencia? Estamos acá para ayudarte. Por favor,
+          completá el siguiente formulario y nos pondremos en contacto con vos
+          lo antes posible. ¡Gracias por elegir Squadra!
+        </p>
+      </section>
 
-        <li class="formulario">
-          <form>
-            <label for="nombre">Nombre</label>
-            <input
-              type="text"
-              name="nombre"
-              id="nombre"
-              placeholder="Joaquin Corradi"
-              required
-            />
+      <section class="contenedor-formulario section-individual">
+        <form class="formulario-contacto">
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Nombre*"
+            required
+          />
 
-            <label for="email">E-mail</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="me@me.com"
-              required
-            />
-            <br />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="E-mail*"
+            required
+          />
 
-            <label for="mensaje">Mensaje</label>
-            <textarea rows="5" id="mensaje" required></textarea>
-          </form>
-        </li>
-      </ul>
+          <textarea
+            rows="5"
+            id="mensaje"
+            placeholder="Mensaje*"
+            required
+          ></textarea>
+
+          <section class="contenedor-botones">
+            <button class="reset" type="reset">Borrar</button>
+            <button type="submit">Enviar</button>
+          </section>
+        </form>
+      </section>
     </section>
 
     <footer>

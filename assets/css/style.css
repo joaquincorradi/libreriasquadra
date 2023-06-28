@@ -21,6 +21,11 @@ a:hover {
   color: #019ede;
 }
 
+/*Animacion al hacer hover en los links*/
+a {
+  transition: 0.3s ease;
+}
+
 /*Configuración de la barra de anuncio*/
 .anuncio {
   padding: 0.4rem;
@@ -136,6 +141,16 @@ h2.servicios {
   border-radius: 1rem;
   height: 18rem;
   width: 18rem;
+}
+
+img.imagen-servicio {
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+img.imagen-servicio:hover {
+  /* opacity: 0.3; */
+  transform: scale(1.05);
 }
 
 p.texto-servicio {
