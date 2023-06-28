@@ -1,8 +1,5 @@
-/*Para poder usar iconos de nerd fonts*/
-@import "https://www.nerdfonts.com/assets/css/webfont.css";
-
 html {
-  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /*Resetear todos los valores de margin en el body a 0*/
@@ -19,10 +16,12 @@ a:active {
   color: inherit;
 }
 
+/*Agregar color al hacer hover en los links*/
 a:hover {
   color: #019ede;
 }
 
+/*Configuración de la barra de anuncio*/
 .anuncio {
   padding: 0.4rem;
   background-color: #f3f3f3;
@@ -36,17 +35,18 @@ a.anuncio {
   text-decoration: underline;
 }
 
+/*Configuración del logo*/
 header {
   padding: 0.5rem;
   text-align: center;
 }
 
+/*Configuración de la barra de navegación*/
 nav {
   text-align: center;
   color: #5c5c5c;
   font-size: 0.875rem;
   font-family: "Oswald", sans-serif;
-  /* background-color: #d4a373; */
   background-color: #f3f3f3;
   padding: 0.3rem;
 }
@@ -83,10 +83,7 @@ h2.bienvenida {
 }
 
 p.bienvenida {
-  font-size: 1.5rem;
-}
-
-p.bienvenida {
+  font-size: 1.3rem;
   margin-bottom: 3rem;
 }
 
@@ -94,8 +91,8 @@ p.bienvenida {
   font-size: 1rem;
   margin-top: 2rem;
   padding: 0.75rem;
-  background: grey;
-  border: 0.125rem solid grey;
+  background: #f3f3f3;
+  border: 0.125rem solid #f3f3f3;
   border-radius: 0.5rem;
 }
 
@@ -124,6 +121,7 @@ h2.servicios {
 
 .contenedor-servicios ul {
   list-style-type: none;
+  padding: 0rem;
 }
 
 .contenedor-servicios li {
@@ -136,28 +134,32 @@ h2.servicios {
 
 .imagen-servicio {
   border-radius: 1rem;
-  height: 20rem;
-  width: 20rem;
+  height: 18rem;
+  width: 18rem;
 }
 
 p.texto-servicio {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   font-size: 1.2rem;
+  color: #ffffff;
 }
 
 .testimonial-contenedor {
   padding: 3rem;
+  background-color: #222222;
 }
 
 .testimonial h3 {
   font-size: 1.7rem;
   font-weight: 400;
   font-style: italic;
+  color: #ffffff;
 }
 
 .testimonial p {
   font-size: 1.2rem;
+  color: #ffffff;
 }
 
 .contenedor-mapa {
@@ -191,6 +193,7 @@ footer {
   display: inline-block;
   padding-left: 1rem;
   padding-right: 1rem;
+  font-size: 1.3rem;
 }
 
 .margin-primer p {
@@ -214,14 +217,13 @@ footer {
 
 .contenedor-pagos ul {
   list-style-type: none;
+  padding: 0rem;
+  margin-bottom: 0rem;
 }
 
 .contenedor-pagos li {
   display: inline-block;
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.contenedor-redes li:hover {
-  opacity: 0.7;
+  font-size: 1.2rem;
 }
