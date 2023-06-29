@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+    <!-- CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <!-- FA -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Pedido - Libreria Squadra</title>
+  </head>
+  <body>
+    <!-- Barra de anuncio -->
+    <section class="anuncio">
+      <a class="anuncio" href="pedido.html"
+        >ENVÍOS GRATUITOS EN BELL VILLE EN COMPRAS SUPERIORES A $5000 - 3 CUOTAS
+        SIN INTERÉS</a
+      >
+    </section>
+
+    <!-- Título principal -->
+    <header>
+      <a href="index.html" id="titulo-logo">
+        <img src="assets/img/squadra.webp" height="200" alt="squadra logo" />
+      </a>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+      <ul>
+        <a href="index.html"><li>Inicio</li></a>
+        <a href="sobre.html"><li>Sobre nosotros</li></a>
+        <a href="pedido.html"><li>Hacer pedido</li></a>
+        <a href="galeria.html"><li>Galería</li></a>
+        <a href="contacto.html"><li>Contactanos</li></a>
+      </ul>
+    </nav>
+
+    <section class="contenedor-pedido">
+      <article>
+        <h2 class="titulo">1. Elige los productos</h2>
+      </article>
+
+      <article>
+        <form>
+          <h4>Portaminas</h4>
+          <select name="portaminas">
+            <option selected disabled hidden>Seleccione una opcion</option>
+            <option value="Pm1 Pilot1">
+              Pilot Dr. Grip Ace Shaker ($5.580)
+            </option>
+            <option value="Pm2 Pilot2">Pilot AirBlanc ($1.638)</option>
+            <option value="Pm3 Pentel1">Pentel Orenz Nero ($14.136)</option>
+            <option value="Pm4 Zebra1">Zebra DelGuard Type-ER ($5.332)</option>
+            <option value="Pm5 Zebra2">Zebra Techo TS-3 Min ($2.852)</option>
+            <option value="Pm6 Ohto1">Ohto Minimo ($3.844)</option>
+            <option value="Pm7 Uni1">Uni Kuru Toga Roulette ($6.696)</option>
+            <option value="Pm8 Uni1">
+              Uni Kuru Toga Advance Upgrade Model ($7.688)
+            </option>
+            <option value="Pm9 Uni3">Uni Kuru Toga Dive ($19.840)</option>
+          </select>
+        </form>
+      </article>
+
+      <article>
+        <h4>Calculadoras</h4>
+        <select name="calculadoras">
+          <option selected disabled hidden>Seleccione una opcion</option>
+          <option value="Casio">Casio fx-991LA CW ($17.360)</option>
+          <option value="TI">Texas Instruments TI-36X ($9.920)</option>
+          <option value="Sharp">Sharp EL-W516TBSL ($13.883)</option>
+        </select>
+      </article>
+
+      <article>
+        <h4>Eco-friendly</h4>
+        <select name="eco">
+          <option selected disabled hidden>Seleccione una opcion</option>
+          <option value="Eco1">
+            Cuaderno Fabriano EcoQua Gluebound ($4.464)
+          </option>
+          <option value="Eco2">Cuaderno Kokuyo Campus Recycled ($2.976)</option>
+        </select>
+      </article>
+    </section>
+
+    <section class="contenedor-datos">
+      <article>
+        <h2 class="titulo">2. Ingresa tus datos</h2>
+      </article>
+
+      <article>
+        <form>
+          <input type="text" name="nombre" placeholder="Nombre*" required />
+          <input type="text" name="apellido" placeholder="Apellido*" required />
+          <input
+            type="text"
+            name="direccion"
+            placeholder="Dirección*"
+            required
+          />
+          <select name="provincia" required>
+            <option selected disabled hidden>Provincia*</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Ciudad Autónomas de Buenos Aires">
+              Ciudad Autónomas de Buenos Aires
+            </option>
+            <option value="Catamarca">Catamarca</option>
+            <option value="CHA">Chaco</option>
+            <option value="CHU">Chubut</option>
+            <option value="CBA">Córdoba</option>
+            <option value="CBA">Corrientes</option>
+            <option value="ER">Entre Ríos</option>
+            <option value="FOR">Formosa</option>
+            <option value="JU">Jujuy</option>
+            <option value="LP">La Pampa</option>
+            <option value="LR">La Rioja</option>
+            <option value="ME">Mendoza</option>
+            <option value="MI">Misiones</option>
+            <option value="NE">Neuquén</option>
+            <option value="RN">Río Negro</option>
+            <option value="SA">Salta</option>
+            <option value="SJ">San Juan</option>
+            <option value="SL">San Luis</option>
+            <option value="SC">Santa Cruz</option>
+            <option value="SF">Santa Fe</option>
+            <option value="SE">Santiago del Estero</option>
+            <option value="TDF">Tierra del Fuego</option>
+            <option value="TU">Tucumán</option>
+          </select>
+          <input type="text" name="ciudad" placeholder="Ciudad*" required />
+          <input
+            type="number"
+            name="cp"
+            placeholder="Código Postal*"
+            min="1000"
+            max="9999"
+            required
+          />
+        </form>
+      </article>
+    </section>
+
+    <section class="contenedor-checkout"></section>
+
+    <footer>
+      <section class="contenedor-volver">
+        <a href="#">Volver a arriba</a>
+      </section>
+
+      <section class="contenedor-redes">
+        <ul>
+          <li>
+            <a href="https://facebook.com/squadralibreria/" target="_blank">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://instagram.com/squadrasrl/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://wa.link/ago3ud" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:squadrasrl@squadrasrl.com.ar" target="_blank">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="contenedor-texto-footer margin-primer">
+        <p>
+          Hecho con <i class="fa-solid fa-heart heart"></i> en
+          <i class="fa-brands fa-linux"></i> por
+          <a href="https://github.com/joaquincorradi" target="_blank"
+            >Joaquín</a
+          >
+          y
+          <a href="https://github.com/feliboerr" target="_blank">Felipe</a>
+        </p>
+      </section>
+
+      <section class="contenedor-texto-footer margin-segundo">
+        <p>
+          Esta web es de
+          <a
+            href="https://github.com/joaquincorradi/libreriasquadra"
+            target="_blank"
+            >código abierto</a
+          >
+        </p>
+      </section>
+
+      <section class="contenedor-pagos">
+        <ul>
+          <li><i class="fa-brands fa-google-pay"></i></li>
+          <li><i class="fa-brands fa-apple-pay"></i></li>
+          <li><i class="fa-brands fa-ethereum"></i></li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>
