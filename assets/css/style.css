@@ -23,7 +23,7 @@ a:hover {
 
 /*Animacion al hacer hover en los links*/
 a {
-  transition: 0.3s ease;
+  transition: 0.45s ease;
 }
 
 /*Configuración de la barra de anuncio*/
@@ -37,7 +37,7 @@ a {
 }
 
 a.anuncio {
-  text-decoration: underline;
+  text-decoration: underline; /*Subrayado*/
 }
 
 /*Configuración del logo*/
@@ -70,10 +70,12 @@ nav a {
   font-size: 1rem;
 }
 
+/*Configuración sección de bienvenida*/
 .bienvenida {
   text-align: center;
 }
 
+/*Colocar imagen como fondo*/
 .section-bienvenida {
   background-image: url(../img/fondo.webp);
   background-repeat: no-repeat;
@@ -92,6 +94,7 @@ p.bienvenida {
   margin-bottom: 3rem;
 }
 
+/*Configuracion de todos los link tipo botones (mas info, comprar)*/
 .section-boton {
   font-size: 1rem;
   margin-top: 2rem;
@@ -101,10 +104,7 @@ p.bienvenida {
   border-radius: 0.5rem;
 }
 
-a:hover.section-boton {
-  color: #019ede;
-}
-
+/*Configuración de la secion de servicios*/
 .servicios {
   background-color: #14477a;
   padding-bottom: 2rem;
@@ -143,6 +143,7 @@ h2.servicios {
   width: 18rem;
 }
 
+/*Animacion de las imagenes de servicios*/
 img.imagen-servicio {
   transition: 0.5s ease;
   backface-visibility: hidden;
@@ -160,6 +161,7 @@ p.texto-servicio {
   color: #ffffff;
 }
 
+/*Configuración testimonial*/
 .testimonial-contenedor {
   padding: 3rem;
   background-color: #222222;
@@ -181,6 +183,7 @@ p.texto-servicio {
   width: 100%;
 }
 
+/*Configuración footer*/
 footer {
   font-size: 0.8rem;
   padding-top: 1rem;

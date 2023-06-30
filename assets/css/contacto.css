@@ -28,7 +28,6 @@ input,
 textarea {
   width: 70%;
   padding: 0.625rem;
-  /* border: 0.0625rempx solid #ccc; */
   border: none;
   border-radius: 0.625rem;
   margin-bottom: 0.625rem;

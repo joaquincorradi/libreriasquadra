@@ -8,6 +8,7 @@
 
     <!-- CSS -->
     <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/pedido.css" rel="stylesheet" />
 
     <!-- FA -->
     <link
@@ -59,113 +60,219 @@
       </ul>
     </nav>
 
-    <section class="contenedor-pedido">
-      <article>
-        <h2 class="titulo">1. Elige los productos</h2>
-      </article>
+    <section class="contenedor">
+      <section class="contenedor-pedido">
+        <article>
+          <h2 class="titulo">1. Elige los productos</h2>
+        </article>
 
-      <article>
         <form>
-          <h4>Portaminas</h4>
-          <select name="portaminas">
-            <option selected disabled hidden>Seleccione una opcion</option>
-            <option value="Pm1 Pilot1">
-              Pilot Dr. Grip Ace Shaker ($5.580)
-            </option>
-            <option value="Pm2 Pilot2">Pilot AirBlanc ($1.638)</option>
-            <option value="Pm3 Pentel1">Pentel Orenz Nero ($14.136)</option>
-            <option value="Pm4 Zebra1">Zebra DelGuard Type-ER ($5.332)</option>
-            <option value="Pm5 Zebra2">Zebra Techo TS-3 Min ($2.852)</option>
-            <option value="Pm6 Ohto1">Ohto Minimo ($3.844)</option>
-            <option value="Pm7 Uni1">Uni Kuru Toga Roulette ($6.696)</option>
-            <option value="Pm8 Uni1">
-              Uni Kuru Toga Advance Upgrade Model ($7.688)
-            </option>
-            <option value="Pm9 Uni3">Uni Kuru Toga Dive ($19.840)</option>
-          </select>
+          <article>
+            <h4>Portaminas</h4>
+            <select name="portaminas">
+              <option selected disabled hidden>
+                --Seleccione una opcion--
+              </option>
+              <option value="Pm1 Pilot1">
+                Pilot Dr. Grip Ace Shaker ($5.580)
+              </option>
+              <option value="Pm2 Pilot2">Pilot AirBlanc ($1.638)</option>
+              <option value="Pm3 Pentel1">Pentel Orenz Nero ($14.136)</option>
+              <option value="Pm4 Zebra1">
+                Zebra DelGuard Type-ER ($5.332)
+              </option>
+              <option value="Pm5 Zebra2">Zebra Techo TS-3 Min ($2.852)</option>
+              <option value="Pm6 Ohto1">Ohto Minimo ($3.844)</option>
+              <option value="Pm7 Uni1">Uni Kuru Toga Roulette ($6.696)</option>
+              <option value="Pm8 Uni1">
+                Uni Kuru Toga Advance Upgrade Model ($7.688)
+              </option>
+              <option value="Pm9 Uni3">Uni Kuru Toga Dive ($19.840)</option>
+            </select>
+
+            <article class="unidades">
+              <input type="radio" name="ud" value="1ud" />
+              <label for="ud">1 Ud.</label>
+              <input type="radio" name="ud" value="10uds" />
+              <label for="ud">10 Uds. (- 5%)</label>
+              <input type="radio" name="ud" value="20uds" />
+              <label for="ud">20 Uds. (- 10%)</label>
+            </article>
+          </article>
+
+          <article>
+            <h4>Calculadoras</h4>
+            <select name="calculadoras">
+              <option selected disabled hidden>
+                --Seleccione una opcion--
+              </option>
+              <option value="Casio">Casio fx-991LA CW ($17.360)</option>
+              <option value="TI">Texas Instruments TI-36X ($9.920)</option>
+              <option value="Sharp">Sharp EL-W516TBSL ($13.883)</option>
+            </select>
+
+            <article class="unidades">
+              <input type="radio" name="ud" value="1ud" />
+              <label for="ud">1 Ud.</label>
+              <input type="radio" name="ud" value="10uds" />
+              <label for="ud">10 Uds. (- 5%)</label>
+              <input type="radio" name="ud" value="20uds" />
+              <label for="ud">20 Uds. (- 10%)</label>
+            </article>
+          </article>
+
+          <article>
+            <h4>Eco-friendly</h4>
+            <select name="eco">
+              <option selected disabled hidden>
+                --Seleccione una opcion--
+              </option>
+              <option value="Eco1">
+                Cuaderno Fabriano EcoQua Gluebound ($4.464)
+              </option>
+              <option value="Eco2">
+                Cuaderno Kokuyo Campus Recycled ($2.976)
+              </option>
+              <option value="Eco3">
+                Lapicera Pilot Acroball M Series ($1.407)
+              </option>
+              <option value="Eco4">Pluma Pilot Kakuno ($6.175)</option>
+              <option value="Eco5">
+                Pegamento en barra Kokuyo Gloo ($1.482)
+              </option>
+            </select>
+
+            <article class="unidades">
+              <input type="radio" name="ud" value="1ud" />
+              <label for="ud">1 Ud.</label>
+              <input type="radio" name="ud" value="10uds" />
+              <label for="ud">10 Uds. (- 5%)</label>
+              <input type="radio" name="ud" value="20uds" />
+              <label for="ud">20 Uds. (- 10%)</label>
+            </article>
+          </article>
+
+          <button class="boton-carrito" type="button">
+            Agregar al carrito
+          </button>
         </form>
-      </article>
+      </section>
 
-      <article>
-        <h4>Calculadoras</h4>
-        <select name="calculadoras">
-          <option selected disabled hidden>Seleccione una opcion</option>
-          <option value="Casio">Casio fx-991LA CW ($17.360)</option>
-          <option value="TI">Texas Instruments TI-36X ($9.920)</option>
-          <option value="Sharp">Sharp EL-W516TBSL ($13.883)</option>
-        </select>
-      </article>
+      <section class="contenedor-datos">
+        <article>
+          <h2 class="titulo">2. Ingresa tus datos</h2>
+        </article>
 
-      <article>
-        <h4>Eco-friendly</h4>
-        <select name="eco">
-          <option selected disabled hidden>Seleccione una opcion</option>
-          <option value="Eco1">
-            Cuaderno Fabriano EcoQua Gluebound ($4.464)
-          </option>
-          <option value="Eco2">Cuaderno Kokuyo Campus Recycled ($2.976)</option>
-        </select>
-      </article>
+        <article>
+          <form>
+            <input
+              class="dato-personal"
+              type="text"
+              name="nombre"
+              placeholder="Nombre*"
+              required
+            />
+            <input
+              class="dato-personal"
+              type="text"
+              name="apellido"
+              placeholder="Apellido*"
+              required
+            />
+            <select class="dato-personal" name="provincia" required>
+              <option selected disabled hidden>Provincia*</option>
+              <option value="Buenos Aires">Buenos Aires</option>
+              <option value="Ciudad Autónomas de Buenos Aires">
+                Ciudad Autónomas de Buenos Aires
+              </option>
+              <option value="Catamarca">Catamarca</option>
+              <option value="CHA">Chaco</option>
+              <option value="CHU">Chubut</option>
+              <option value="CBA">Córdoba</option>
+              <option value="CBA">Corrientes</option>
+              <option value="ER">Entre Ríos</option>
+              <option value="FOR">Formosa</option>
+              <option value="JU">Jujuy</option>
+              <option value="LP">La Pampa</option>
+              <option value="LR">La Rioja</option>
+              <option value="ME">Mendoza</option>
+              <option value="MI">Misiones</option>
+              <option value="NE">Neuquén</option>
+              <option value="RN">Río Negro</option>
+              <option value="SA">Salta</option>
+              <option value="SJ">San Juan</option>
+              <option value="SL">San Luis</option>
+              <option value="SC">Santa Cruz</option>
+              <option value="SF">Santa Fe</option>
+              <option value="SE">Santiago del Estero</option>
+              <option value="TDF">Tierra del Fuego</option>
+              <option value="TU">Tucumán</option>
+            </select>
+            <input
+              class="dato-personal"
+              type="text"
+              name="ciudad"
+              placeholder="Ciudad*"
+              required
+            />
+            <input
+              class="dato-personal"
+              type="text"
+              name="direccion"
+              placeholder="Dirección*"
+              required
+            />
+            <input
+              class="dato-personal"
+              type="number"
+              name="cp"
+              placeholder="Código Postal*"
+              min="1000"
+              max="9999"
+              required
+            />
+
+            <button class="boton-datos" type="button">Confirmar</button>
+          </form>
+        </article>
+      </section>
+
+      <section class="contenedor-checkout">
+        <article>
+          <h2>3. Hacer el pago</h2>
+        </article>
+
+        <article>
+          <h4>¿Tenés un cupón de descuento?</h4>
+          <form>
+            <input type="text" name="codigo" placeholder="Cupón" />
+            <button class="boton-cupon" type="button">Aplicar</button>
+          </form>
+        </article>
+
+        <article>
+          <h4>Total de su compra</h4>
+          <article class="envio">Envio: $</article>
+          <article class="subtotal">Subtotal: $</article>
+          <article class="total">Total: $</article>
+        </article>
+
+        <article>
+          <h4>¿Cómo va a pagar?</h4>
+        </article>
+
+        <article class="medios-pago">
+          <form>
+            <input class="medio" type="radio" name="pago" />
+            <i class="fa-brands fa-google-pay medio"></i>
+            <input class="medio" type="radio" name="pago" />
+            <i class="fa-brands fa-apple-pay medio"></i>
+          </form>
+
+          <button class="boton-comprar" type="button">Comprar</button>
+        </article>
+      </section>
     </section>
-
-    <section class="contenedor-datos">
-      <article>
-        <h2 class="titulo">2. Ingresa tus datos</h2>
-      </article>
-
-      <article>
-        <form>
-          <input type="text" name="nombre" placeholder="Nombre*" required />
-          <input type="text" name="apellido" placeholder="Apellido*" required />
-          <input
-            type="text"
-            name="direccion"
-            placeholder="Dirección*"
-            required
-          />
-          <select name="provincia" required>
-            <option selected disabled hidden>Provincia*</option>
-            <option value="Buenos Aires">Buenos Aires</option>
-            <option value="Ciudad Autónomas de Buenos Aires">
-              Ciudad Autónomas de Buenos Aires
-            </option>
-            <option value="Catamarca">Catamarca</option>
-            <option value="CHA">Chaco</option>
-            <option value="CHU">Chubut</option>
-            <option value="CBA">Córdoba</option>
-            <option value="CBA">Corrientes</option>
-            <option value="ER">Entre Ríos</option>
-            <option value="FOR">Formosa</option>
-            <option value="JU">Jujuy</option>
-            <option value="LP">La Pampa</option>
-            <option value="LR">La Rioja</option>
-            <option value="ME">Mendoza</option>
-            <option value="MI">Misiones</option>
-            <option value="NE">Neuquén</option>
-            <option value="RN">Río Negro</option>
-            <option value="SA">Salta</option>
-            <option value="SJ">San Juan</option>
-            <option value="SL">San Luis</option>
-            <option value="SC">Santa Cruz</option>
-            <option value="SF">Santa Fe</option>
-            <option value="SE">Santiago del Estero</option>
-            <option value="TDF">Tierra del Fuego</option>
-            <option value="TU">Tucumán</option>
-          </select>
-          <input type="text" name="ciudad" placeholder="Ciudad*" required />
-          <input
-            type="number"
-            name="cp"
-            placeholder="Código Postal*"
-            min="1000"
-            max="9999"
-            required
-          />
-        </form>
-      </article>
-    </section>
-
-    <section class="contenedor-checkout"></section>
 
     <footer>
       <section class="contenedor-volver">
