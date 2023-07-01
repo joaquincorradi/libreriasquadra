@@ -74,6 +74,10 @@ button.boton-cupon {
   width: 98%;
 }
 
+.montos > p {
+  margin: 0.4rem 0rem 0.4rem;
+}
+
 i.medio {
   font-size: 2rem;
 }
@@ -84,4 +88,8 @@ input.medio {
 button.boton-comprar {
   width: 100%;
   margin-top: 2rem;
+}
+
+h4 {
+  margin-bottom: 0.5rem;
 }
