@@ -1,5 +1,6 @@
 html {
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /*Resetear todos los valores de margin en el body a 0*/
@@ -191,11 +192,6 @@ footer {
   background-color: #f3f3f3;
 }
 
-.contenedor-volver {
-  font-size: 0.9rem;
-  margin-bottom: 0.7rem;
-}
-
 .contenedor-redes .contenedor-pagos {
   text-align: center;
 }
@@ -229,10 +225,6 @@ footer {
   cursor: pointer;
 }
 
-.heart {
-  color: #f92672;
-}
-
 .contenedor-pagos ul {
   list-style-type: none;
   padding: 0rem;
@@ -244,4 +236,21 @@ footer {
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: 1.2rem;
+}
+
+.volver-arriba {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.8rem;
+  padding: 0.6rem 0.9rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo con transparencia */
+  backdrop-filter: blur(0.3rem);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+
+.volver-arriba:hover {
+  background-color: rgba(0, 0, 0, 0.9);
 }
