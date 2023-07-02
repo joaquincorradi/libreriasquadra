@@ -69,40 +69,40 @@
         <form>
           <article>
             <h4>Portaminas</h4>
-            <select name="portaminas">
+            <select name="portaminas" id="portaminas">
               <option selected disabled hidden>
                 --Seleccione una opcion--
               </option>
-              <option value="Pm1 Pilot1">
+              <option value="Pm1">
                 Pilot Dr. Grip Ace Shaker ($5.580)
               </option>
-              <option value="Pm2 Pilot2">Pilot AirBlanc ($1.638)</option>
-              <option value="Pm3 Pentel1">Pentel Orenz Nero ($14.136)</option>
-              <option value="Pm4 Zebra1">
+              <option value="Pm2">Pilot AirBlanc ($1.638)</option>
+              <option value="Pm3">Pentel Orenz Nero ($14.136)</option>
+              <option value="Pm4">
                 Zebra DelGuard Type-ER ($5.332)
               </option>
-              <option value="Pm5 Zebra2">Zebra Techo TS-3 Min ($2.852)</option>
-              <option value="Pm6 Ohto1">Ohto Minimo ($3.844)</option>
-              <option value="Pm7 Uni1">Uni Kuru Toga Roulette ($6.696)</option>
-              <option value="Pm8 Uni1">
+              <option value="Pm5">Zebra Techo TS-3 Min ($2.852)</option>
+              <option value="Pm6">Ohto Minimo ($3.844)</option>
+              <option value="Pm7">Uni Kuru Toga Roulette ($6.696)</option>
+              <option value="Pm8">
                 Uni Kuru Toga Advance Upgrade Model ($7.688)
               </option>
-              <option value="Pm9 Uni3">Uni Kuru Toga Dive ($19.840)</option>
+              <option value="Pm9">Uni Kuru Toga Dive ($19.840)</option>
             </select>
 
             <article class="unidades">
-              <input type="radio" name="ud" value="1ud" />
+              <input type="radio" name="udPm" value="1ud" id="Pm1Ud" />
               <label for="ud">1 Ud.</label>
-              <input type="radio" name="ud" value="10uds" />
+              <input type="radio" name="udPm" value="10uds" id="Pm10Ud" />
               <label for="ud">10 Uds. (- 5%)</label>
-              <input type="radio" name="ud" value="20uds" />
+              <input type="radio" name="udPm" value="20uds" id="Pm20Ud" />
               <label for="ud">20 Uds. (- 10%)</label>
             </article>
           </article>
 
           <article>
             <h4>Calculadoras</h4>
-            <select name="calculadoras">
+            <select name="calculadoras" id="calculadoras">
               <option selected disabled hidden>
                 --Seleccione una opcion--
               </option>
@@ -112,18 +112,18 @@
             </select>
 
             <article class="unidades">
-              <input type="radio" name="ud" value="1ud" />
+              <input type="radio" name="udCalc" value="1ud" id="Calc1Ud" />
               <label for="ud">1 Ud.</label>
-              <input type="radio" name="ud" value="10uds" />
+              <input type="radio" name="udCalc" value="10uds" id="Calc10Ud"/>
               <label for="ud">10 Uds. (- 5%)</label>
-              <input type="radio" name="ud" value="20uds" />
+              <input type="radio" name="udCalc" value="20uds" id="Calc20Ud"/>
               <label for="ud">20 Uds. (- 10%)</label>
             </article>
           </article>
 
           <article>
             <h4>Eco-friendly</h4>
-            <select name="eco">
+            <select name="eco" id="eco">
               <option selected disabled hidden>
                 --Seleccione una opcion--
               </option>
@@ -143,16 +143,16 @@
             </select>
 
             <article class="unidades">
-              <input type="radio" name="ud" value="1ud" />
+              <input type="radio" name="udEco" value="1ud" id="Eco1Ud" />
               <label for="ud">1 Ud.</label>
-              <input type="radio" name="ud" value="10uds" />
+              <input type="radio" name="udEco" value="10uds" id="Eco10Ud" />
               <label for="ud">10 Uds. (- 5%)</label>
-              <input type="radio" name="ud" value="20uds" />
+              <input type="radio" name="udEco" value="20uds" id="Eco20Ud"/>
               <label for="ud">20 Uds. (- 10%)</label>
             </article>
           </article>
 
-          <button class="boton-carrito" type="button">
+          <button onclick="imprimirSubTotal()"  class="boton-carrito" type="button">
             Agregar al carrito
           </button>
         </form>
@@ -166,6 +166,7 @@
         <article>
           <form>
             <input
+              id="nombre"
               class="dato-personal"
               type="text"
               name="nombre"
@@ -173,13 +174,14 @@
               required
             />
             <input
+              id="apellido"
               class="dato-personal"
               type="text"
               name="apellido"
               placeholder="Apellido*"
               required
             />
-            <select class="dato-personal" name="provincia" required>
+            <select id="provincia" class="dato-personal" name="provincia" required>
               <option selected disabled hidden>Provincia*</option>
               <option value="Buenos Aires">Buenos Aires</option>
               <option value="Ciudad Autónomas de Buenos Aires">
@@ -209,6 +211,7 @@
               <option value="TU">Tucumán</option>
             </select>
             <input
+              id="ciudad"
               class="dato-personal"
               type="text"
               name="ciudad"
@@ -216,6 +219,7 @@
               required
             />
             <input
+              id="direccion"
               class="dato-personal"
               type="text"
               name="direccion"
@@ -223,6 +227,7 @@
               required
             />
             <input
+              id="codigoPostal"
               class="dato-personal"
               type="number"
               name="cp"
@@ -232,7 +237,7 @@
               required
             />
 
-            <button class="boton-datos" type="button">Confirmar</button>
+            <button class="boton-datos" type="button" onclick="imprimirEnvio()">Confirmar</button>
           </form>
         </article>
       </section>
@@ -252,8 +257,8 @@
 
         <article>
           <h4>Total de su compra</h4>
-          <article class="envio montos"><p>Envio: $</p></article>
-          <article class="subtotal montos"><p>Subtotal: $</p></article>
+          <article class="envio montos" id="envio"><p>Envio: $</p></article>
+          <article class="subtotal montos" id="subTotal"><p>Subtotal: $</p></article>
           <article class="total montos"><p>Total: $</p></article>
         </article>
 
@@ -272,6 +277,7 @@
           <button class="boton-comprar" type="button">Comprar</button>
         </article>
       </section>
+      <script src="assets/js/pedido.js"></script>
     </section>
 
     <footer>

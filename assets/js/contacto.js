@@ -19,9 +19,9 @@ function mostrarMensaje() {
 }
 
 function validarEntrada() {
-  nombreDelCliente = document.getElementById("nombre").value;
-  emailDelCliente = document.getElementById("email").value;
-  mensajeDelCliente = document.getElementById("mensaje").value;
+  let nombreDelCliente = document.getElementById("nombre").value;
+  let emailDelCliente = document.getElementById("email").value;
+  let mensajeDelCliente = document.getElementById("mensaje").value;
 
   if (
     nombreDelCliente == "" ||
