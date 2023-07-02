@@ -147,11 +147,11 @@ h2.servicios {
 /*Animacion de las imagenes de servicios*/
 img.imagen-servicio {
   transition: 0.5s ease;
-  backface-visibility: hidden;
+  box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.2),
+    0rem 0.4rem 1.25rem 0rem rgba(0, 0, 0, 0.19);
 }
 
 img.imagen-servicio:hover {
-  /* opacity: 0.3; */
   transform: scale(1.05);
 }
 
