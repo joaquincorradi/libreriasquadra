@@ -265,7 +265,7 @@
         <article>
           <h4>¿Tenés un cupón de descuento?</h4>
           <form>
-            <input  type="text" name="codigo" placeholder="Ej.: DESCUENTO10" />
+            <input  id="campo-descuento" type="text" name="codigo" placeholder="Ej.: DESCUENTO10" />
             <button onclick="aplicarDescuento()" id="descuento" class="boton-cupon" type="button">Aplicar</button>
           </form>
         </article>
@@ -291,7 +291,7 @@
             <i class="fa-brands fa-apple-pay medio"></i>
           </form>
 
-          <button class="boton-comprar" type="button">Comprar</button>
+          <button onclick="comprar()" class="boton-comprar" type="button">Comprar</button>
         </article>
       </section>
       <script src="assets/js/pedido.js"></script>
