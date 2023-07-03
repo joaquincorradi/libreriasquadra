@@ -2,12 +2,19 @@ let subTotalPm = 0;
 let subTotalCalc = 0;
 let subTotalEco = 0;
 let subTotal = 0;
-let valorEnvio = 0;
 let total = 0;
+
+let valorEnvio = 0;
+
 let aplicoDescuento = false;
+
 let seleccionoUnidadesPm = false;
 let seleccionoUnidadesCalc = false;
 let seleccionoUnidadesEco = false;
+
+let yaIngresoPm = false;
+let yaIngresoCalc = false;
+let yaIngresoEco = false;
 
 // Calcular el precio neto de los productos
 function calcularSubTotal() {
@@ -73,40 +80,58 @@ function calcularSubTotal() {
   }
 
   // A partir de aca se calculan las unidades
+  let Pm1Ud = document.getElementById("Pm1Ud").checked
   let Pm10Ud = document.getElementById("Pm10Ud").checked;
   let Pm20Ud = document.getElementById("Pm20Ud").checked;
 
+  let Calc1Ud = document.getElementById("Calc1Ud").checked
   let Calc10Ud = document.getElementById("Calc10Ud").checked;
   let Calc20Ud = document.getElementById("Calc20Ud").checked;
 
+  let Cco1Ud = document.getElementById("Eco1Ud").checked
   let Eco10Ud = document.getElementById("Eco10Ud").checked;
   let Eco20Ud = document.getElementById("Eco20Ud").checked;
-
+  
+  if (Pm1Ud) {
+    yaIngresoPm = true;
+  }
   if (Pm10Ud) {
     subTotalPm *= 10;
     subTotalPm = (95 * subTotalPm) / 100;
+    yaIngresoPm = true;
   }
   if (Pm20Ud) {
     subTotalPm *= 20;
     subTotalPm = (90 * subTotalPm) / 100;
+    yaIngresoPm = true;
   }
 
+  if (Calc1Ud) {
+    yaIngresoCalc = true;
+  }
   if (Calc10Ud) {
     subTotalCalc *= 10;
     subTotalPm = (95 * subTotalCalc) / 100;
+    yaIngresoCalc = true;
   }
   if (Calc20Ud) {
     subTotalCalc *= 20;
     subTotalCalc = (90 * subTotalCalc) / 100;
+    yaIngresoCalc = true;
   }
 
+  if (Eco1Ud) {
+    yaIngresoEco = true;
+  }
   if (Eco10Ud) {
     subTotalEco *= 10;
     subTotalEco = (95 * subTotalEco) / 100;
+    yaIngresoEco = true;
   }
   if (Eco20Ud) {
     subTotalEco *= 10;
     subTotalEco = (90 * subTotalEco) / 100;
+    yaIngresoEco = true;
   }
 
   subTotal = subTotalPm + subTotalCalc + subTotalEco;
@@ -143,13 +168,13 @@ function imprimirSubTotal() {
   let campoSubTotal = document.getElementById("subTotal");
   chequearUnidades();
 
-  if (!seleccionoUnidadesPm && subTotalPm > 0) {
+  if (!seleccionoUnidadesPm && subTotalPm > 0 && !yaIngresoPm) {
     alert("Seleccione cuántas unidades de portaminas desea");
     console.log("If portaminas");
-  } else if (!seleccionoUnidadesPm && subTotalCalc > 0) {
+  } else if (!seleccionoUnidadesPm && subTotalCalc > 0 && !yaIngresoCalc) {
     alert("Seleccione cuántas unidades de calculadora desea");
     console.log("If calculadoras");
-  } else if (!seleccionoUnidadesPm && subTotalEco > 0) {
+  } else if (!seleccionoUnidadesPm && subTotalEco > 0 && !yaIngresoEco) {
     alert("Seleccione cuántas unidades de productos eco-friendly desea");
     console.log("If eco");
   } else {
