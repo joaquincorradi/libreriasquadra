@@ -162,7 +162,7 @@
           >
             Borrar selección
           </button>
-          <button type="button" class="boton-carrito">Vaciar carrito</button>
+          <button onclick="vaciarCarrito()" type="button" class="boton-carrito">Vaciar carrito</button>
         </form>
       </section>
 
@@ -250,7 +250,7 @@
               required
             />
 
-            <button class="boton-datos" type="button" onclick="imprimirEnvio()">
+            <button class="boton-datos" type="button" onclick="valuarEntrada()">
               Confirmar
             </button>
           </form>
@@ -265,8 +265,8 @@
         <article>
           <h4>¿Tenés un cupón de descuento?</h4>
           <form>
-            <input type="text" name="codigo" placeholder="Ej.: DESCUENTO10" />
-            <button class="boton-cupon" type="button">Aplicar</button>
+            <input  type="text" name="codigo" placeholder="Ej.: DESCUENTO10" />
+            <button onclick="aplicarDescuento()" id="descuento" class="boton-cupon" type="button">Aplicar</button>
           </form>
         </article>
 
@@ -276,7 +276,7 @@
           <article class="subtotal montos" id="subTotal">
             <p>Subtotal: $</p>
           </article>
-          <article class="total montos"><p>Total: $</p></article>
+          <article class="total montos"><p id="total">Total: $</p></article>
         </article>
 
         <article>
@@ -285,9 +285,9 @@
 
         <article class="medios-pago">
           <form>
-            <input class="medio" type="radio" name="pago" />
+            <input id="gpay"  class="medio" type="radio" name="pago" />
             <i class="fa-brands fa-google-pay medio"></i>
-            <input class="medio" type="radio" name="pago" />
+            <input id="apay"  class="medio" type="radio" name="pago" />
             <i class="fa-brands fa-apple-pay medio"></i>
           </form>
 

@@ -2,6 +2,8 @@ let subTotalPm = 0;
 let subTotalCalc = 0;
 let subTotalEco = 0;
 let subTotal = 0;
+let valorEnvio = 0;
+let total = 0;
 
 // Calcular el precio neto de los productos
 function calcularSubTotal() {
@@ -120,19 +122,54 @@ function imprimirSubTotal() {
   } else {
     alert("Por favor, seleccione un producto para agregar al carrito");
   }
+
+  if (total > 0) {
+    imprimirTotal();
+  }
+}
+
+function borrarSeleccionCarrito() {
+  document.getElementById("portaminas").value = "";
+  document.getElementById("calculadoras").value = "";
+  document.getElementById("eco").value = "";
+
+  document.getElementById("Pm1Ud").checked = false;
+  document.getElementById("Pm10Ud").checked = false;
+  document.getElementById("Pm20Ud").checked = false;
+
+  document.getElementById("Calc1Ud").checked = false;
+  document.getElementById("Calc10Ud").checked = false;
+  document.getElementById("Calc20Ud").checked = false;
+
+  document.getElementById("Eco1Ud").checked = false;
+  document.getElementById("Eco10Ud").checked = false;
+  document.getElementById("Eco20Ud").checked = false;
+}
+
+function vaciarCarrito() {
+  subTotalPm = 0;
+  subTotalCalc = 0;
+  subTotalEco = 0;
+  subTotal = 0;
+
+  let campoSubTotal = document.getElementById("subTotal");
+
+  campoSubTotal.textContent = "Subtotal: $";
+  campoSubTotal.textContent += subTotal;
+  
+  alert("Se vació el carrito")
 }
 
 function calcularEnvio() {
   let ciudad = document.getElementById("ciudad").value;
-  let valorEnvio = 0;
+  let codigoPostal = document.getElementById("codigoPostal").value;
+  let provincia = document.getElementById("provincia").value;
 
-  // Se ejecuta el if pero igualmente dice que el envio es 750
-  if (ciudad == "Bell Ville" || ciudad == "bell ville") {
+  if (ciudad == "Bell Ville" || ciudad == "bell ville" && codigoPostal == "CBA" && provincia == "CBA") {
     valorEnvio = 0;
-    console.log("La ciudad es " + ciudad);
-    console.log("Se ejecuta el if");
   } else {
     valorEnvio = 750;
+    imprimirTotal();
   }
 
   return valorEnvio;
@@ -163,23 +200,36 @@ function valuarEntrada() {
     codigoPostal == ""
   ) {
     alert("Por favor, complete todos los campos");
+  } else {
+    imprimirEnvio();
   }
 }
 
-function borrarSeleccionCarrito() {
-  document.getElementById("portaminas").value = "";
-  document.getElementById("calculadoras").value = "";
-  document.getElementById("eco").value = "";
+function aplicarDescuento() {
+  let descuento = document.getElementById("descuento").value;
 
-  document.getElementById("Pm1Ud").checked = false;
-  document.getElementById("Pm10Ud").checked = false;
-  document.getElementById("Pm20Ud").checked = false;
+  if (descuento == "DESCUENTO10") {
+    subTotal = (90 * subTotal) / 100;
+    imprimirSubTotal()
+    console.log("Se ejecuta if")
+  } else if (descuento == "DESCUENTO15") {
+    subTotal = (85 * subTotal) / 100;
+    imprimirSubTotal()
+    console.log("Se ejecuta else if")
+  } else if (descuento != "DESCUENTO10" && descuento != "DESCUENTO15"){
+    alert("No es valido el descuento")
+  }
+}
 
-  document.getElementById("Calc1Ud").checked = false;
-  document.getElementById("Calc10Ud").checked = false;
-  document.getElementById("Calc20Ud").checked = false;
+// Agregar que se calcule el total cuando el usuario agrega mas items despues de haber
+// calculado el envio.
+function calcularTotal() {
+  total = subTotal + valorEnvio;
+}
 
-  document.getElementById("Eco1Ud").checked = false;
-  document.getElementById("Eco10Ud").checked = false;
-  document.getElementById("Eco20Ud").checked = false;
+function imprimirTotal() {
+  let campoTotal = document.getElementById("total");
+  
+  campoTotal.textContent = "Total: $";
+  campoTotal.textContent += total;
 }
