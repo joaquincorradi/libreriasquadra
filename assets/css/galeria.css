@@ -4,7 +4,7 @@
 
 .contenedor-imagenes {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   grid-template-rows: 1fr 1fr 1fr;
   grid-column-gap: 1.25rem;
   grid-row-gap: 1.25rem;
@@ -47,6 +47,7 @@ h2 {
 
 .nav-galeria ul {
   list-style-type: none;
+  padding: 0rem;
 }
 
 .nav-galeria li {
@@ -65,4 +66,15 @@ h2 {
   margin-right: 0.5rem;
   /* border: 0.06rem solid #000; */
   border-radius: 0.5rem;
+}
+
+.contenedor-video {
+  text-align: center;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.contenedor-video img {
+  width: 100%;
+  height: auto;
 }
