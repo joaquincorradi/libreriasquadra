@@ -34,9 +34,10 @@ input[type="radio"] {
 .contenedor-datos,
 .contenedor-checkout {
   margin-right: 3rem;
-  border: 0.125rem solid #f3f3f3;
+  /* border: 0.125rem solid #f3f3f3; */
   border-radius: 0.5rem;
   padding: 1.5rem;
+  background-color: #333333;
 }
 
 button {

@@ -80,18 +80,18 @@ function calcularSubTotal() {
   }
 
   // A partir de aca se calculan las unidades
-  let Pm1Ud = document.getElementById("Pm1Ud").checked
+  let Pm1Ud = document.getElementById("Pm1Ud").checked;
   let Pm10Ud = document.getElementById("Pm10Ud").checked;
   let Pm20Ud = document.getElementById("Pm20Ud").checked;
 
-  let Calc1Ud = document.getElementById("Calc1Ud").checked
+  let Calc1Ud = document.getElementById("Calc1Ud").checked;
   let Calc10Ud = document.getElementById("Calc10Ud").checked;
   let Calc20Ud = document.getElementById("Calc20Ud").checked;
 
-  let Cco1Ud = document.getElementById("Eco1Ud").checked
+  let Eco1Ud = document.getElementById("Eco1Ud").checked;
   let Eco10Ud = document.getElementById("Eco10Ud").checked;
   let Eco20Ud = document.getElementById("Eco20Ud").checked;
-  
+
   if (Pm1Ud) {
     yaIngresoPm = true;
   }
@@ -166,18 +166,27 @@ function chequearUnidades() {
 function imprimirSubTotal() {
   let subTotalCompra = calcularSubTotal();
   let campoSubTotal = document.getElementById("subTotal");
+  let tmp1 = false,
+    tmp2 = false,
+    tmp3 = false;
   chequearUnidades();
 
   if (!seleccionoUnidadesPm && subTotalPm > 0 && !yaIngresoPm) {
     alert("Seleccione cuántas unidades de portaminas desea");
-    console.log("If portaminas");
-  } else if (!seleccionoUnidadesPm && subTotalCalc > 0 && !yaIngresoCalc) {
+    tmp1 = true;
+  }
+
+  if (!seleccionoUnidadesCalc && subTotalCalc > 0 && !yaIngresoCalc) {
     alert("Seleccione cuántas unidades de calculadora desea");
-    console.log("If calculadoras");
-  } else if (!seleccionoUnidadesPm && subTotalEco > 0 && !yaIngresoEco) {
+    tmp2 = true;
+  }
+
+  if (!seleccionoUnidadesEco && subTotalEco > 0 && !yaIngresoEco) {
     alert("Seleccione cuántas unidades de productos eco-friendly desea");
-    console.log("If eco");
-  } else {
+    tmp3 = true;
+  }
+
+  if (!tmp1 && !tmp2 && !tmp3) {
     campoSubTotal.textContent = "Subtotal: $";
     campoSubTotal.textContent += subTotalCompra;
     if (subTotalCompra > 0) {
@@ -187,7 +196,7 @@ function imprimirSubTotal() {
       alert("Por favor, seleccione un producto para agregar al carrito");
     }
   }
-  
+
   if (total > 0) {
     imprimirTotal();
   }
@@ -221,8 +230,8 @@ function vaciarCarrito() {
 
   campoSubTotal.textContent = "Subtotal: $";
   campoSubTotal.textContent += subTotal;
-  
-  alert("Se vació el carrito")
+
+  alert("Se vació el carrito");
 }
 
 function calcularEnvio() {
@@ -230,7 +239,10 @@ function calcularEnvio() {
   let codigoPostal = document.getElementById("codigoPostal").value;
   let provincia = document.getElementById("provincia").value;
 
-  if (ciudad == "Bell Ville" || ciudad == "bell ville" && codigoPostal == "2550" && provincia == "CBA") {
+  if (
+    (ciudad == "Bell Ville" && codigoPostal == "2550" && provincia == "CBA") ||
+    (ciudad == "bell ville" && codigoPostal == "2550" && provincia == "CBA")
+  ) {
     valorEnvio = 0;
     imprimirTotal();
   } else {
@@ -289,10 +301,10 @@ function aplicarDescuento() {
       campoSubTotal.textContent += subTotal;
       imprimirTotal();
     } else {
-      alert("No es valido el descuento")
+      alert("No es valido el descuento");
     }
   } else {
-    alert("Usted ya aplicó un descuento")
+    alert("Usted ya aplicó un descuento");
   }
 }
 
@@ -305,17 +317,17 @@ function calcularTotal() {
 function imprimirTotal() {
   calcularTotal();
   let campoTotal = document.getElementById("total");
-  
+
   campoTotal.textContent = "Total: $";
   campoTotal.textContent += total;
 }
 
 function comprar() {
-  borrarDatos();
   let apay = document.getElementById("apay").checked;
-  let gpay = document.getElementById("gpay").checked
+  let gpay = document.getElementById("gpay").checked;
+
   if (subTotal == 0 || document.getElementById("nombre").value == "") {
-    alert("Por favor ingrese sus datos o agregue productos al carrito")
+    alert("Por favor ingrese sus datos o agregue productos al carrito");
   } else {
     if (apay == false && gpay == false) {
       alert("Por favor, elija un método de pago");
@@ -323,6 +335,9 @@ function comprar() {
       alert("Compra realizada con éxito");
       borrarDatos();
       borrarSeleccionCarrito();
+      document.getElementById("campo-descuento") = "";
+      apay = false;
+      gpay = false;
     }
   }
 }
@@ -334,5 +349,4 @@ function borrarDatos() {
   document.getElementById("ciudad").value = "";
   document.getElementById("direccion").value = "";
   document.getElementById("codigoPostal").value = "";
-
 }
